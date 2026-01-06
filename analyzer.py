@@ -1,4 +1,5 @@
 import json
+import pandas as pd
 from typing import Dict
 
 
@@ -41,3 +42,34 @@ class LabAnalyzer:
             "reference_range": f"{lower} – {upper}",
             "status": status
         }
+
+    def analyze_dataframe(self, df: pd.DataFrame) -> pd.DataFrame:
+        """
+        Analyze an uploaded CSV/Excel dataframe row-by-row.
+
+        Required columns:
+        - test
+        - value
+        - sex
+
+        Optional:
+        - panel (defaults to 'General')
+        """
+
+        results = []
+
+        for _, row in df.iterrows():
+            panel = row.get("panel", "General")
+            test_name = row["test"]
+            value = row["value"]
+            sex = row.get("sex", "male")
+
+            result = self.analyze_test(
+                panel=panel,
+                test_name=test_name,
+                value=value,
+                sex=sex
+            )
+            results.append(result)
+
+        return pd.DataFrame(results)
