@@ -119,7 +119,7 @@ if st.button("Analyze Results"):
         else:
             df_input = pd.read_excel(uploaded_file)
 
-
+        df_results = analyzer.analyze_dataframe(df_input)
 
     # ==================================================
     # ================= RESULTS ========================
