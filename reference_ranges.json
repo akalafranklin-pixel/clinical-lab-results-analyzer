@@ -1,0 +1,91 @@
+{
+  "CBC": {
+    "WBC": {
+      "unit": "x10^9/L",
+      "range": {
+        "male": [4.0, 11.0],
+        "female": [4.0, 11.0]
+      }
+    },
+    "RBC": {
+      "unit": "x10^12/L",
+      "range": {
+        "male": [4.7, 6.1],
+        "female": [4.2, 5.4]
+      }
+    },
+    "Hemoglobin": {
+      "unit": "g/dL",
+      "range": {
+        "male": [13.8, 17.2],
+        "female": [12.1, 15.1]
+      }
+    },
+    "Hematocrit": {
+      "unit": "%",
+      "range": {
+        "male": [40.7, 50.3],
+        "female": [36.1, 44.3]
+      }
+    },
+    "Platelets": {
+      "unit": "x10^9/L",
+      "range": {
+        "male": [150, 450],
+        "female": [150, 450]
+      }
+    },
+    "Neutrophils": {
+      "unit": "%",
+      "range": {
+        "male": [40, 75],
+        "female": [40, 75]
+      }
+    },
+    "Lymphocytes": {
+      "unit": "%",
+      "range": {
+        "male": [20, 45],
+        "female": [20, 45]
+      }
+    }
+  },
+
+  "BMP": {
+    "Glucose": {
+      "unit": "mg/dL",
+      "range": {
+        "male": [70, 99],
+        "female": [70, 99]
+      }
+    },
+    "Sodium": {
+      "unit": "mmol/L",
+      "range": {
+        "male": [135, 145],
+        "female": [135, 145]
+      }
+    },
+    "Potassium": {
+      "unit": "mmol/L",
+      "range": {
+        "male": [3.5, 5.1],
+        "female": [3.5, 5.1]
+      }
+    },
+    "Urea": {
+      "unit": "mg/dL",
+      "range": {
+        "male": [7, 20],
+        "female": [7, 20]
+      }
+    },
+    "Creatinine": {
+      "unit": "mg/dL",
+      "range": {
+        "male": [0.74, 1.35],
+        "female": [0.59, 1.04]
+      }
+    }
+  }
+}
