@@ -46,14 +46,6 @@ class LabAnalyzer:
     def analyze_dataframe(self, df: pd.DataFrame) -> pd.DataFrame:
         """
         Analyze an uploaded CSV/Excel dataframe row-by-row.
-
-        Required columns:
-        - test
-        - value
-        - sex
-
-        Optional:
-        - panel (defaults to 'General')
         """
 
         results = []
@@ -70,6 +62,7 @@ class LabAnalyzer:
                 value=value,
                 sex=sex
             )
+
             results.append(result)
 
         return pd.DataFrame(results)
