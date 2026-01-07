@@ -83,9 +83,16 @@ if st.button("Analyze Results"):
             return ["background-color: #d4edda"] * len(row)
 
     st.dataframe(
-        df.style.apply(highlight_status, axis=1),
-        use_container_width=True
-    )
+    df.style
+        .apply(highlight_status, axis=1)
+        .set_properties(**{
+            "background-color": "#f5f7fa",   # soft grey background
+            "color": "#1f2937",              # dark readable text
+            "border-color": "#d1d5db"
+        }),
+    width="stretch"
+)
+
 
     # ------------------ Visual Analysis ------------------ #
     st.subheader("Visual Analysis")
